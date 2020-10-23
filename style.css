@@ -9,6 +9,7 @@
     --on-background-alt:rgba(66,66,66,0.7);
     --background:rgb(255,255,255);
     --box-shadow:0 5px 20px 1px rgba(0,0,0,0.5);
+    --border:#000;
 }
 
 [data-theme="dark"]{
@@ -19,6 +20,7 @@
     --on-background:rgb(255,255,255,0.9);
     --on-background-alt:rgba(255,255,255,0.7);
     --background:#121212;
+    --border:#fff;
 }
 
 html{
@@ -29,6 +31,7 @@ html{
 
 body{
     margin:0;
+    width:100%;
     min-height:100vh;
     color:var(--on-background);
     font-family:'comfortaa', cursive;
@@ -49,12 +52,14 @@ h1{
     margin:0;
     font-family:'kaushan script', cursive;
     font-size:5rem;
+    text-align:center;
 }
 
 h2{
     color:var(--on-background-alt);
     font-size:2rem;
     font-weight:normal;
+    text-align:center;
 }
 
 /* Navigation Section */
@@ -81,6 +86,57 @@ a:hover,
 a:focus{
     color:var(--on-background);
     border-bottom:3px solid;
+}
+
+/* Hamburger Icon */
+.hamburger-icon{
+    position:relative;
+    display: none;
+    width:50px;
+    height:50px;
+    border:0.5px solid var(--border);
+    border-radius:5px;
+    /* display:flex;
+    justify-content:space-around;
+    flex-direction: column; */
+}
+
+.hamburger-icon-dash,
+.hamburger-icon-close{
+    position:absolute;
+    left:50%;
+    display:block;
+    width:80%;
+    height:5px;
+    background-color: var(--primary-color);
+    transform:translate(-50%,-50%);
+    /* border:1px solid red; */
+}
+
+.hamburger-icon-dash:nth-child(1){
+    top:25%;
+}
+
+.hamburger-icon-dash:nth-child(2){
+    top:50%;
+}
+
+.hamburger-icon-dash:nth-child(3){
+    top:75%;
+}
+
+.hamburger-icon-close:nth-child(1){
+    top:50%;
+    transform:translate(-50%,-50%) rotateZ(45deg);
+}
+
+.hamburger-icon-close:nth-child(2){
+    display:none;
+}
+
+.hamburger-icon-close:nth-child(3){
+    top:50%;
+    transform:translate(-50%,-50%) rotateZ(-45deg);
 }
 
 /* Home Section */
@@ -123,8 +179,7 @@ button{
     height:40px;
     cursor:pointer;
     border-radius:10px;
-    margin-right:10px;
-    margin-bottom:15px;
+    margin:10px;
     border:2px solid var(--primary-color);
     font-size:15px;
     outline:none;
@@ -190,7 +245,7 @@ p{
 
 .fab{
     font-size: 100px;
-    margin-right:50px;
+    margin:25px;
     cursor:pointer;
     color: var(--primary-color);
 }
@@ -273,4 +328,25 @@ input:checked + .slider::before{
 .fas{
     font-size:30px;
     margin-right:5px;
+}
+
+/* Media Query: For Mobile Phones */
+
+@media screen and (max-width: 640px){
+    h1{
+        font-size: 3rem;
+    }
+
+    h2{
+        font-size: 1.2rem;
+    }
+
+    nav > a{
+        display:none;
+    }
+
+    .hamburger-icon{
+        display: block;
+    }
+
 }

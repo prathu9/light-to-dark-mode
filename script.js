@@ -5,6 +5,7 @@ const image1 = document.getElementById("image1");
 const image2 = document.getElementById("image2");
 const image3 = document.getElementById("image3");
 const textBox = document.getElementById("text-box");
+const hamburgerIcon = document.getElementById("hamburger-icon");
 
 //Dark Mode Styles
 const darkMode = ()=>{
@@ -57,6 +58,14 @@ const changeTheme = (event)=>{
     }   
 }
 
-//Event Listener
+//For Hamburger Icon
+//changing hamburger Icon
+const changeHamburgerIcon = ()=>{
+    hamburgerIcon.forEach((item)=>{
+        console.log(item);
+    })
+}
 
+//Event Listener
 toggleSwitch.addEventListener("change", changeTheme);
+hamburgerIcon.addEventListener("click", changeHamburgerIcon);
