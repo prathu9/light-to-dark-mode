@@ -96,9 +96,7 @@ a:focus{
     height:50px;
     border:0.5px solid var(--border);
     border-radius:5px;
-    /* display:flex;
-    justify-content:space-around;
-    flex-direction: column; */
+    cursor:pointer;
 }
 
 .hamburger-icon-dash,
@@ -108,8 +106,9 @@ a:focus{
     display:block;
     width:80%;
     height:5px;
-    background-color: var(--primary-color);
+    background-color: var(--on-background);
     transform:translate(-50%,-50%);
+    transition:0.2s;
     /* border:1px solid red; */
 }
 
@@ -137,6 +136,17 @@ a:focus{
 .hamburger-icon-close:nth-child(3){
     top:50%;
     transform:translate(-50%,-50%) rotateZ(-45deg);
+}
+
+/* Mobile Navigation Menu */
+.mobile-nav{
+    display:none;
+    position:fixed;
+    z-index:80;
+    width:100vw;
+    height:100vh;
+    background-color:var(--primary-color);
+    /* transform:translateX(-100%); */
 }
 
 /* Home Section */
@@ -261,7 +271,7 @@ p{
     position:fixed;
     top:30px;
     right:25px;
-    z-index:100;
+    z-index:50;
 }
 
 .theme-switch-wrapper span{
@@ -341,10 +351,15 @@ input:checked + .slider::before{
         font-size: 1.2rem;
     }
 
+    nav{
+        /* z-index:100; */
+        background-color:initial;
+    }
+
     nav > a{
         display:none;
     }
-
+    
     .hamburger-icon{
         display: block;
     }

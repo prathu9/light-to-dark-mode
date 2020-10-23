@@ -6,6 +6,8 @@ const image2 = document.getElementById("image2");
 const image3 = document.getElementById("image3");
 const textBox = document.getElementById("text-box");
 const hamburgerIcon = document.getElementById("hamburger-icon");
+const mobileNav = document.getElementById("mobile-nav");
+let isMobile = false;
 
 //Dark Mode Styles
 const darkMode = ()=>{
@@ -61,9 +63,26 @@ const changeTheme = (event)=>{
 //For Hamburger Icon
 //changing hamburger Icon
 const changeHamburgerIcon = ()=>{
-    hamburgerIcon.forEach((item)=>{
-        console.log(item);
-    })
+    let hamburgerChildren = hamburgerIcon.children;
+    for(let i=0; i < hamburgerChildren.length; i++){
+        hamburgerChildren.item(i).classList.toggle("hamburger-icon-close");
+    }
+    console.log(hamburgerIcon.dataset.mobilenav === "open");
+    if(hamburgerIcon.dataset.mobilenav === "open"){
+        mobileNav.style.display = "block";
+        // mobileNav.style.transform = "translateX(100%)";
+        nav.style.zIndex = "100";
+        nav.style.backgroundColor = "initial";
+        hamburgerIcon.dataset.mobilenav = "close";
+    }
+    else{
+        mobileNav.style.display = "none";
+        // mobileNav.style.transform = "translateX(-100%)";
+        nav.style.zIndex = "10";
+        nav.style.backgroundColor = "default";
+        hamburgerIcon.dataset.mobilenav = "open";
+    }
+    
 }
 
 //Event Listener
