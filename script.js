@@ -69,7 +69,7 @@ const changeHamburgerIcon = ()=>{
     }
     console.log(hamburgerIcon.dataset.mobilenav === "open");
     if(hamburgerIcon.dataset.mobilenav === "open"){
-        mobileNav.style.display = "block";
+        mobileNav.style.display = "flex";
         // mobileNav.style.transform = "translateX(100%)";
         nav.style.zIndex = "100";
         nav.style.backgroundColor = "initial";
