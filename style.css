@@ -50,6 +50,7 @@ section{
 
 h1{
     margin:0;
+    padding:10px;
     font-family:'kaushan script', cursive;
     font-size:5rem;
     text-align:center;
@@ -388,8 +389,12 @@ input:checked + .slider::before{
 /* Media Query: For Mobile Phones */
 
 @media screen and (max-width: 640px){
+    section{
+        padding-top:3.2rem;
+    }
+
     h1{
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
 
     h2{
