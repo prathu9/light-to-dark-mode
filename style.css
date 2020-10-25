@@ -142,6 +142,7 @@ a:focus{
 /* Mobile Navigation Menu */
 .mobile-nav{
     display:none;
+    padding:10px;
     justify-content:center;
     align-items:center;
     flex-direction:column;
