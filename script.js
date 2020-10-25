@@ -7,7 +7,6 @@ const image3 = document.getElementById("image3");
 const textBox = document.getElementById("text-box");
 const hamburgerIcon = document.getElementById("hamburger-icon");
 const mobileNav = document.getElementById("mobile-nav");
-let isMobile = false;
 
 //Dark Mode Styles
 const darkMode = ()=>{
@@ -67,7 +66,6 @@ const changeHamburgerIcon = ()=>{
     for(let i=0; i < hamburgerChildren.length; i++){
         hamburgerChildren.item(i).classList.toggle("hamburger-icon-close");
     }
-    console.log(hamburgerIcon.dataset.mobilenav === "open");
     if(hamburgerIcon.dataset.mobilenav === "open"){
         mobileNav.style.display = "flex";
         // mobileNav.style.transform = "translateX(100%)";
