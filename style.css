@@ -287,6 +287,28 @@ p{
     color: var(--on-background);
 }
 
+/* Back To Top Button */
+.back-to-top{
+    position:fixed;
+    right:0;
+    bottom:0;
+    margin:0;
+    padding:10px;
+    border:1px solid var(--border);
+    color:var(--on-primary);
+    background-color:var(--on-background);
+    border-radius:5px;
+    font-weight:bold;
+    text-align:center;
+    text-decoration:none;
+    cursor:pointer;
+}
+
+.back-to-top:hover,
+.back-to-top:active{
+    background-color:var(--background);
+}
+
 /* Dark Mode Switch */
 .theme-switch-wrapper{
     display:flex;
